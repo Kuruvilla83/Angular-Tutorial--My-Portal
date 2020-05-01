@@ -1,0 +1,12 @@
+.flex-container{ 
+ display: flex;
+ margin-top: 20px;  
+ border: 10px solid transparent;
+border-image: url(src\assets\images\borderimage2) 30 round; 
+}
+.flex-container div { 
+ /*height : 100px;*/
+ width : 100%;
+ padding: 10px;
+ border: 1px solid goldenrod;
+}
