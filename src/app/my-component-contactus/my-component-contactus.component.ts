@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-my-component-contactus',
@@ -6,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-component-contactus.component.css']
 })
 
-export class MyComponentContactusComponent implements OnInit {
-
-  constructor() { }
+export class MyComponentContactusComponent implements OnInit, OnChanges, OnDestroy {
+subscribeData;
+  constructor( private sendContactService:ContactService) { }
 
   ngOnInit(): void {
+        this.subscribeData=this.sendContactService.sendContact().subscribe( message=> { 
+      console.log(message)
+    })
   }
-
+  ngOnChanges(): void{
+  }
+  ngOnDestroy(): void{
+    this.subscribeData.unsubscribe()
+  }
 }
