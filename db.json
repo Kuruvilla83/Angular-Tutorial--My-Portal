@@ -1,0 +1,34 @@
+{
+  "person": [
+    {
+      "id": 1,
+      "name": "A",
+      "address": "json-server Test",
+      "sex": "M"
+    },
+    {
+      "id": 2,
+      "name": "B",
+      "address": "json-server Test",
+      "sex": "F"
+    },
+    {
+      "id": 3,
+      "name": "C",
+      "address": "json-server Test",
+      "sex": "M"
+    },
+    {
+      "id": 4,
+      "name": "D",
+      "address": "json-server Test",
+      "sex": "F"
+    },
+    {
+      "id": 5,
+      "name": "D",
+      "address": "json-server Test",
+      "sex": "M"
+    }
+  ]
+}

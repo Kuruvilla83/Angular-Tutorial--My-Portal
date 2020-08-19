@@ -6,9 +6,15 @@ import { of, Observable } from 'rxjs';
 })
 export class ContactService {
 
+counter=0;  
   constructor() { }
 
-  sendContact() : Observable<string>{ 
+  sendContact() { 
     return of('contact sent')
   }
+  getCounter() {
+    this.counter++
+    return of(this.counter)
+  }
+  
 }

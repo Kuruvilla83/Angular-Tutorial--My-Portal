@@ -15,6 +15,9 @@ subscribeData;
         this.subscribeData=this.sendContactService.sendContact().subscribe( message=> { 
       console.log(message)
     })
+    this.sendContactService.getCounter().subscribe(count=>{
+      console.log('counter: ', count)
+    })
   }
   ngOnChanges(): void{
   }

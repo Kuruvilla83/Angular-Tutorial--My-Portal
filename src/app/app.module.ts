@@ -7,6 +7,8 @@ import { MyComponentContactusComponent } from './my-component-contactus/my-compo
 import { MyComponentAboutmeComponent } from './my-component-aboutme/my-component-aboutme.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SampletemplateComponent } from './sampletemplate/sampletemplate.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,8 @@ import { SampletemplateComponent } from './sampletemplate/sampletemplate.compone
     MyComponentAboutmeComponent,
     SampletemplateComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
