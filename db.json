@@ -2,33 +2,38 @@
   "person": [
     {
       "id": 1,
-      "name": "A",
-      "address": "json-server Test",
-      "sex": "M"
+      "name": "keith",
+      "address": "123 Florida",
+      "sex": "M",
+      "active": true
     },
     {
       "id": 2,
-      "name": "B",
-      "address": "json-server Test",
-      "sex": "F"
+      "name": "pilly",
+      "address": "123 Connecticut",
+      "sex": "F",
+      "active": true
     },
     {
       "id": 3,
-      "name": "C",
-      "address": "json-server Test",
-      "sex": "M"
+      "name": "ann",
+      "address": "123 New Jersey",
+      "sex": "F",
+      "active": true
     },
     {
       "id": 4,
-      "name": "D",
-      "address": "json-server Test",
-      "sex": "F"
+      "name": "Mathew",
+      "address": "j123 New York",
+      "sex": "M",
+      "active": false
     },
     {
       "id": 5,
-      "name": "D",
-      "address": "json-server Test",
-      "sex": "M"
+      "name": "Jeremiah",
+      "address": "123 Florida",
+      "sex": "M",
+      "active": false
     }
   ]
 }

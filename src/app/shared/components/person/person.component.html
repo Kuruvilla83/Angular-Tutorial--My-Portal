@@ -1,0 +1,6 @@
+<!-- This is the method on how to use classes dynamically on any templates. Also below shows clor difference based on the boolean value under person -->
+<div class="person" [ngClass]="{'inactive':!person.active, 'active': person.active}">
+    <!--  (ctl+ fws slash)-----Title class is a piped class of angular -->
+    <h2> {{ person.name | titlecase }} ({{ person.sex }})</h2>
+    <div>{{ person.address}}</div>
+</div>

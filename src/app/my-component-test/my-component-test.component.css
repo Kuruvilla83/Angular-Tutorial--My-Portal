@@ -1,0 +1,11 @@
+.list {
+  border-bottom: 1px solid black;
+}
+.people_list {
+  width: 500px;
+}
+.timestamp {
+  margin-top: 15px;
+  font-size: 10px;
+  color: #999;
+}

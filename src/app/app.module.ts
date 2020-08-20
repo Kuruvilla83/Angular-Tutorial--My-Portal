@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SampletemplateComponent } from './sampletemplate/sampletemplate.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { PersonComponent } from './shared/components/person/person.component';
+import { PersonSorterPipe } from './shared/person-sorter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     MyComponentContactusComponent,
     MyComponentAboutmeComponent,
     SampletemplateComponent,
+    PersonComponent,
+    PersonSorterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, CommonModule, HttpClientModule],
   providers: [],

@@ -1,4 +1,14 @@
 <p>my-component-test works!</p>
-<div *ngFor="let person of persons">
-    <h2>{{ person.name }}</h2>
+<p>
+    <b>Number of People </b> {{ persons.length }}
+</p>
+<div class="people_list">
+    <!-- Pipes are good to transform the data int eh template without doing logic in the component class -->
+    <!-- <div *ngFor="let p of persons" class="list"> -->
+    <div *ngFor="let p of persons | personSorter" class="list">
+        <app-person [person]="p"></app-person>
+
+    </div>
 </div>
+<!--<div class="timestamp"> {{ date | date:'M/d/yy' }}</div> -->
+<div class="timestamp"> {{ date | date:'short' }}</div>

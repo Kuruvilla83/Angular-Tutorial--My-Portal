@@ -1,0 +1,13 @@
+.person {
+  padding: 25px 0;
+}
+h2 {
+  margin: 0;
+  color: #555;
+}
+.inactive * {
+  color: red;
+}
+.active * {
+  color: greenyellow;
+}

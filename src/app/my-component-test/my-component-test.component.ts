@@ -10,6 +10,7 @@ import { Person } from '../static/person';
 export class MyComponentTestComponent implements OnInit {
   //persons: any[];
   persons: Person[];
+  date: Date;
   constructor(protected personService: PersonService) {}
 
   ngOnInit(): void {
@@ -17,5 +18,7 @@ export class MyComponentTestComponent implements OnInit {
       console.log(persons);
       this.persons = persons;
     });
+
+    this.date = new Date();
   }
 }
