@@ -2,10 +2,18 @@
 <p>
     <b>Number of People </b> {{ persons.length }}
 </p>
+<button class="btn primary" (mouseover)="filterBy('active')" [disabled]="false"> Active </button>
+<button class="btn primary" (click)="filterBy('inactive')"> Inactive </button>
+<button class="btn primary" (click)="filterBy('')"> All </button>
+<button class="btn primary" (click)="filterBy('female')"> Female </button>
+<button class="btn primary" (click)="filterBy('male')"> Male </button>
+
 <div class="people_list">
     <!-- Pipes are good to transform the data int eh template without doing logic in the component class -->
     <!-- <div *ngFor="let p of persons" class="list"> -->
-    <div *ngFor="let p of persons | personSorter" class="list">
+
+    <!-- It is also setting filter as the argument from the pipe class -->
+    <div *ngFor="let p of persons | personFilter:filter | personSorter" class="list">
         <app-person [person]="p"></app-person>
 
     </div>

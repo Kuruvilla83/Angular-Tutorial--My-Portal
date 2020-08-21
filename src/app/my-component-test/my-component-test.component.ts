@@ -11,6 +11,8 @@ export class MyComponentTestComponent implements OnInit {
   //persons: any[];
   persons: Person[];
   date: Date;
+  filter = '';
+
   constructor(protected personService: PersonService) {}
 
   ngOnInit(): void {
@@ -20,5 +22,9 @@ export class MyComponentTestComponent implements OnInit {
     });
 
     this.date = new Date();
+  }
+
+  filterBy(filterBy: string) {
+    this.filter = filterBy;
   }
 }

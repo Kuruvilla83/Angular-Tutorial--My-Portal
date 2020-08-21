@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonComponent } from './shared/components/person/person.component';
 import { PersonSorterPipe } from './shared/person-sorter.pipe';
+import { PersonFilterPipe } from './shared/person-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PersonSorterPipe } from './shared/person-sorter.pipe';
     SampletemplateComponent,
     PersonComponent,
     PersonSorterPipe,
+    PersonFilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, CommonModule, HttpClientModule],
   providers: [],
