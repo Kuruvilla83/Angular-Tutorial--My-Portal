@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>
+        ADD User
+    </h1>
+    <!-- #addUser is the name we are defining TO PASS UNDER sUMIT(addUSER) -->
+    <form #addUser="ngForm" (ngSubmit)="addUser.form.valid && submit(addUser)">
+        <div>
+            <label for="name">User Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="userData.name" #name="ngModel" required />
+            <!-- name below represents the template variable name (#name=ngModel). dirty means its been edited before and touched means we clicked -->
+            <span *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</span>
+        </div>
+
+        <!--The for from the label is related to the input id name. Id is unique mement fo r that tag. Name is the property of that input.
+        NgModel is the binding to that ccomponent variable. # tag address is the template variable name for that element. template varuiable name is independent.
+    "userData.address represent the element of that object model. -->
+        <div>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" [(ngModel)]="userData.address" #address="ngModel"
+                minlength="3" required />
+            <span *ngIf="address.invalid && (address.dirty || address.touched)">Address is required</span>
+        </div>
+        <div>
+            <label for="sex">Sex</label>
+            <select id="sex" name="sex" [(ngModel)]="userData.sex" #sex="ngModel" required>
+                <option selected value="">Select</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <span *ngIf="sex.invalid && (sex.dirty || sex.touched)">Field is required</span>
+        </div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>
+
+<!-- Below name referring to the element from component. When we edit, it will edit property value -->
+{{ userData.name }}
+
+{{ userData.address }}
+
+{{ userData.sex }}

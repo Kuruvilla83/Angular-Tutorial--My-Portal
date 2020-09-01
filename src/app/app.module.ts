@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonComponent } from './shared/components/person/person.component';
 import { PersonSorterPipe } from './shared/person-sorter.pipe';
 import { PersonFilterPipe } from './shared/person-filter.pipe';
+import { AddPersonComponent } from './add-person/add-person.component';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EditPersonComponent } from './edit-person/edit-person.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +27,18 @@ import { PersonFilterPipe } from './shared/person-filter.pipe';
     PersonComponent,
     PersonSorterPipe,
     PersonFilterPipe,
+    AddPersonComponent,
+    EditPersonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, HttpClientModule],
+  entryComponents: [EditPersonComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    NgbModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

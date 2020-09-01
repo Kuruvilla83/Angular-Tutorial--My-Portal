@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>
+        Edit User
+    </h1>
+    <form #editUser="ngForm" (ngSubmit)="editUser.form.valid && submit()">
+        <div>
+            <label for="name">User Name</label>
+            <!-- NgModal is a dynamic attribute of ngModal. We are doing a 2 way binding of value. -->
+            <input type="text" id="name" name="name" [(ngModel)]="userData.name" #name="ngModel" required />
+            <!-- dirty means its been edited before and touched means we clicked -->
+            <span *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</span>
+        </div>
+        <div>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" [(ngModel)]="userData.address" #address="ngModel"
+                minlength="3" required />
+            <span *ngIf="address.invalid && (address.dirty || address.touched)">Address is required</span>
+        </div>
+        <div>
+            <label for="sex">Sex</label>
+            <select id="sex" name="sex" [(ngModel)]="userData.sex" #sex="ngModel" required>
+                <option selected value="">Select</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <span *ngIf="sex.invalid && (sex.dirty || sex.touched)">Field is required</span>
+        </div>
+        <div>
+            <label for="active">Active</label>
+            <select id="active" name="active" [(ngModel)]="userData.active" #active="ngModel" required>
+                <option value="1">Active</option>
+                <option value="0">Inactive</option>
+            </select>
+            <span *ngIf="active.invalid && (active.dirty || active.touched)">Field is required</span>
+        </div>
+        <div>
+            <button type="submit">Edit</button>
+            <button (click)="close()">Cancel</button>
+        </div>
+    </form>
+</div>
+
+{{ userData.name }}
+
+{{ userData.address }}
+
+{{ userData.sex }}
