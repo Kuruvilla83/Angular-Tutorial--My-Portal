@@ -5,6 +5,7 @@ import { Person } from '../static/person';
   name: 'personFilter',
 })
 export class PersonFilterPipe implements PipeTransform {
+  /* istanbul ignore next*/
   transform(persons: Person[], filterBy: string): Person[] {
     switch (filterBy) {
       case 'active':

@@ -25,12 +25,13 @@ export class MyComponentTestComponent implements OnInit {
     this.getPersons();
     this.date = new Date();
   }
-
+  /* istanbul ignore next*/
   filterBy(filterBy: string) {
     this.filter = filterBy;
   }
 
   // Here we are using 3 arguments to see user deleted. Below argument patterns are standard ones for observable under angular.
+  /* istanbul ignore next*/
   deleteUser(id) {
     this.personService.deletePerson(id).subscribe(
       (res) => {
@@ -45,12 +46,14 @@ export class MyComponentTestComponent implements OnInit {
     );
     console.log(id);
   }
-
+  /* istanbul ignore next*/
   openEditUserModal(id) {
     // Constant is a keyword for setting of a variable name.
     const modalRef = this.modalService.open(EditPersonComponent);
     // Component Instance is a function from ngbModel Service
     modalRef.componentInstance.id = id;
+    // () is a method we defining during the fly which calls as arrow funtion also lambda function.
+    //ES6 arrow functions in youtube.
     modalRef.componentInstance.updated.subscribe(() => {
       this.getPersons();
     });

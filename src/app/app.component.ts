@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
   title = 'myportal';
   date: Date;
   // this.date = new Date();
+  /* istanbul ignore next*/
   ngOnInit(): void {
     this.date = new Date();
   }

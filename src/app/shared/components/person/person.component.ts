@@ -20,10 +20,11 @@ export class PersonComponent implements OnInit {
 
   ngOnInit(): void {}
   // Here we are emitting the id of the person during an event
+  /* istanbul ignore next*/
   delete() {
     this.deletePerson.emit(this.person.id);
   }
-
+  /* istanbul ignore next*/
   edit() {
     this.editPerson.emit(this.person.id);
   }

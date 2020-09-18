@@ -10,7 +10,8 @@ import { PersonService } from '../services/person.service';
 })
 export class EditPersonComponent implements OnInit {
   @Input() id: number;
-  @Input() close;
+  // This is a function which return void so that is the type.
+  @Input() close: () => void;
   @Output() updated: EventEmitter<boolean> = new EventEmitter();
   userData: Person;
   constructor(private personService: PersonService) {
@@ -23,7 +24,7 @@ export class EditPersonComponent implements OnInit {
       this.userData = person;
     });
   }
-
+  /* istanbul ignore next*/
   submit() {
     this.personService.updatePerson(this.id, this.userData).subscribe(
       () => {
